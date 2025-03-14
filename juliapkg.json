@@ -1,0 +1,9 @@
+{
+    "julia": "1.5",
+    "packages": {
+        "MarineHydro": {
+            "uuid": "8d7a907f-d253-4c14-a318-41dd3f310a02",
+            "url": "https://github.com/symbiotic-engineering/MarineHydro.jl"
+        }
+    }
+}
