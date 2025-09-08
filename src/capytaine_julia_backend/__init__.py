@@ -8,6 +8,9 @@ class CapytaineJuliaBackend:
         if mesh1 is not mesh2:
             raise NotImplementedError()
 
+        if free_surface != 0.0 or water_depth != float('inf'):
+            raise NotImplementedError()
+
         green_functions = (self.jl.Rankine(), self.jl.RankineReflected(), self.jl.GFWu())
         mesh = self.jl.Mesh(mesh1)
         S, D = self.jl.MarineHydro.assemble_matrices_broadcasting(green_functions, mesh, wavenumber, direct=not adjoint_double_layer)
